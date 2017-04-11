@@ -24,14 +24,14 @@
 
 const express = require('express');
 const app = express();
-const responseTime = require( 'connect-middleware-response-time' );
+var responseTime = require('response-time')
 const cp = require('child_process')
 
 // Use the response time middleware for all requests:
-app.use( responseTime( logger ) );
+app.use(responseTime(logger))
 
-function logger( value ) {
-    console.log( 'Response time: %s ms', value );
+function logger( req, res, time ) {
+    console.log(`Response time: ${time} ms for route ${req.url}` );
 }
 
 app.get('/', (req, res) => res.send('Hello, World'));
