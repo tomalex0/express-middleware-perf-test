@@ -1,6 +1,7 @@
 # express-middleware-perf-test
 To Test middleware response time and also to trace sync call
-Courtesy  - https://gist.github.com/ghaiklor/9682b79353aade8a1e59
+
+Courtesy : https://gist.github.com/ghaiklor/9682b79353aade8a1e59
 
 - `node --trace-sync-io index.js`
 -  To see synchronouse call error  http://localhost:3000/sync 
